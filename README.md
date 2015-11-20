@@ -1,1 +1,1 @@
-# Bioinformatics-pipelines in Sylvester Biostatistics and Bioinformatics Core Resource
+# Bioinformatics pipelines in Sylvester Biostatistics and Bioinformatics Core Resource
