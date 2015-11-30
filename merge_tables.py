@@ -16,7 +16,7 @@
 #python ~/Code/merge_tables.py Sample_10_raw_count.txt
 # you will get file name as "merged_counts.txt"
 # this file is used as input for Run_DESeq2.R
-qq
+
 #####################################################
 #   example.py - a program to ....                  #
 #                                                   #
@@ -97,5 +97,4 @@ for gene in genes:
 	outfile.write(out_data)
 	
 outfile.close()
-print "Merged table is 'merged_counts.txt'"	
-
+print "Merged table is 'merged_counts.txt'"
