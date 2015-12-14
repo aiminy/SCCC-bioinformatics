@@ -1,7 +1,7 @@
 **Pipeline for RNA seq data analysis**
 
-1. Item 1
-2. Item 2
-3. Item 3
-   * Item 3a
-   * Item 3b
+1. Sequence short read file processing
+2. Sequence alignment
+3. Feature counting
+   * Differential expression 
+   * Gene Set Enrichment Analysis(GSEA)
