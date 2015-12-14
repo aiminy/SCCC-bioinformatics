@@ -18,15 +18,46 @@ library(biomaRt)
 library(goseq)
 
 setwd("~/bishopric/RNAseq/rawData/140128_SN392_0190_AC3EYUACXX")
+dir()
+
 data.140128.sn392.0190<-read.table("merged_counts.txt",sep="\t",header = T,row.names=1)
+data.140128.sn392.0190.2<-read.table("merged_counts.txt",sep="\t",header = T,row.names=1)
+data.140128.sn392.0190.2
+
+#countData <- matrix(1:100,ncol=4)
+#condition <- factor(c("B","B","A","A"))
+#condition
+#dds<-DESeqDataSetFromMatrix(countData, DataFrame(colnames(countData.cbpK0.2)),~1)
+#ddsdds <- DESeqDataSetFromMatrix(countData, DataFrame(condition), ~ condition)
+#colData(dds)
+
+#dds$condition
+#dds$condition <- factor(dds$condition, levels=c("untreated","treated"))
+#dds$condition
 
 #For genotype cbpKO
-data.cbpKO<-data.140128.sn392.0190[,c(1,12,2,3)]
-head(data.cbpKO)
-countData <- data.cbpKO
+data.cbpKO.2<-data.140128.sn392.0190.2[,c(1,12,2,3)]
+head(data.cbpKO.2)
+countData.cbpK0.2 <- data.cbpKO.2
 condition <- factor(c("cbpKO_t","cbpKO_t","cbpKO_ck","cbpKO_ck"))
-dds <- DESeqDataSetFromMatrix(countData, DataFrame(condition), ~ condition)
+#dds <- DESeqDataSetFromMatrix(countData.cbpK0.2)
+dds <- DESeqDataSetFromMatrix(countData.cbpK0.2, DataFrame(condition), ~ condition)
+colData(dds)
+dds$condition
+dds$condition <- factor(dds$condition, levels=c(rep("untreated",2),rep("treated",2)))
+
 re.cbpKO<-results(DESeq(dds))
+#dds
+#col
+colData(dds)
+re.cbpKO
+
+res.cbpK0.2 <- results(DESeq(dds), contrast=c("condition","cbpKO_t","cbpKO_ck"))
+res.cbpK0.2
+
+res.cbpK0.3 <- results(DESeq(dds), contrast=c("condition","cbpKO_ck","cbpKO_t"))
+res.cbpK0.3
+
 write.csv(re.cbpKO,file="DE_cbpK0.csv")
 write.csv(data.cbpKO,file="Count_cbpk0.csv")
 
@@ -51,12 +82,35 @@ write.csv(re.WT,file="DE_WT.csv")
 write.csv(data.WT,file="Count_WT.csv")
 
 #For genotype p300K0
-data.p300K0<-data.140128.sn392.0190[,c(8,9,10,11)]
-head(data.p300K0)
-countData.p300K0 <- data.p300K0
+data.p300K0.2<-data.140128.sn392.0190.2[,c(8,9,10,11)]
+head(data.p300K0.2)
+countData.p300K0 <- data.p300K0.2
 condition.p300K0 <- factor(c("p300K0_t","p300K0_t","p300K0_ck","p300K0_ck"))
+
 dds.p300K0 <- DESeqDataSetFromMatrix(countData.p300K0, DataFrame(condition.p300K0), ~ condition.p300K0)
+colData(dds.p300K0)
+
 re.p300K0<-results(DESeq(dds.p300K0))
+rownames(re.p300K0)
+re.p300K0
+
+res.p300K0.2 <- results(DESeq(dds.p300K0), contrast=c("condition.p300K0","p300K0_t","p300K0_ck"))
+res.p300K0.2
+
+res.p300K0.3 <- results(DESeq(dds.p300K0), contrast=c("condition.p300K0","p300K0_ck","p300K0_t"))
+res.p300K0.3
+
+re.p300K0[which(rownames(re.p300K0) %in% c("Ddx3y")),]
+res.p300K0.2[which(rownames(res.p300K0.2) %in% c("Ddx3y")),]
+res.p300K0.3[which(rownames(res.p300K0.3) %in% c("Ddx3y")),]
+
+#FC
+
+2^(re.p300K0[which(rownames(re.p300K0) %in% c("Ddx3y")),2])
+2^(res.p300K0.2[which(rownames(res.p300K0.2) %in% c("Ddx3y")),2])
+2^(-res.p300K0.2[which(rownames(res.p300K0.2) %in% c("Ddx3y")),2])
+2^(res.p300K0.3[which(rownames(res.p300K0.3) %in% c("Ddx3y")),2])
+
 write.csv(re.p300K0,file="DE_p300K0.csv")
 write.csv(data.p300K0,file="Count_p300K0.csv")
 
@@ -159,7 +213,6 @@ head(resLRT.data.jianping.2)
 head(resLRT.data.jianping)
 dim(resLRT.data.jianping.2)
 
-
 st(resLRT)
 write.csv(cbind(res.HET.K,res.HET.WT,res.K.WT,resLRT),file="All_plus_contrast_comparision.csv")
 write.csv(resLRT,file="All_3_groups_comparision.csv")
@@ -206,5 +259,5 @@ write.csv(resLRT.data.jianping.2,file="All_3_groups_raw_count.csv")
 #results(re.p300K0)
 #str(re.p300K0)
 
-#save.image(file="DE_cbpKO.RData")
+save.image(file="DE_jianping.RData")
 #dir(pattern = "RData")
