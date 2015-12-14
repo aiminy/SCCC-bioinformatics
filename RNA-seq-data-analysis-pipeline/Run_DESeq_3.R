@@ -1,4 +1,6 @@
 #!/usr/bin/env Rscript
+#Usage: Rscript Run_DESeq_3.R inputfile_count inputfile_sample_information outputfile_prefix
+
 library("DESeq2")
 library("heatmap3")
 library("lattice")
