@@ -13,8 +13,6 @@ echo "$sample_name"
 
 cat > Run_"$sample_name"_htseq_count_4_sorted_bam_2.sh <<EOF
 
-#samtools sort -n "$f" "$f"_sorted.bam
-
 htseq-count -f bam -r name -s yes -i gene_name "$f" genes.gtf  > "$sample_name"_raw_count_4_sorted_bam.count
 
 EOF
