@@ -15,8 +15,6 @@ cat > Run_"$sample_name"_htseq_count_4_sorted_bam.sh <<EOF
 
 samtools sort -n "$f" "$f"_sorted.bam
 
-#htseq-count -f bam -r name -s yes -i gene_name "$f"_sorted.bam genes.gtf  > "$sample_name"_raw_count_4_sorted_bam.txt
-
 EOF
 
 bsub -P Bioinformatics4count < Run_"$sample_name"_htseq_count_4_sorted_bam.sh
