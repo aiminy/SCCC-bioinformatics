@@ -19,7 +19,6 @@ sh ~/Script_bash/RunAlignment4PairEnd.sh Sample_9.txt
 sh ~/Script_bash/RunAlignment4SingleEnd.sh Sample_9.txt  
 ```
 *Feature counting*
-   **Get counts for each gene
 ```bash
 # put all bam file names into FileBam.txt
 sh Bash_run_submit_job_4_sorted_bam.sh FileBam.txt
