@@ -4,6 +4,7 @@
 2. Sequence alignment
 3. Feature counting
    * Differential expression
+
 **To run
 
 ```R
