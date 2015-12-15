@@ -1,9 +1,13 @@
 **Pipeline for RNA seq data analysis**
 
-1. Sequence short read file processing
+1. Short read sequence files processing
 
 ```
-#move to the directory containg the files ending with _fastqc.zip generated with FastQC
+#download FastQC, then type
+mkdir QC_output
+fastqc -o QC_output fq1 fq2 fq3
+
+#move to the directory(QC_output) containg the files ending with _fastqc.zip generated with FastQC
 #then: 
 python ~/Code/RNA-seq-data-analysis-pipeline/QcSum.py
 ```
