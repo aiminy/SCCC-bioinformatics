@@ -22,8 +22,8 @@ sh Bash_run_submit_job_4_sorted_bam_2.sh FileBamSorted.txt
 
 ```python
 #To put all count files into one file
-python ~/Code/merge_tables.py Sample_10_raw_count.txt
-#After you run this, you will get a file named as 
+python python ~/Code/RNA-seq-data-analysis-pipeline/merge_tables.py Sample_10_raw_count.txt Output_count_samples10.txt
+
 ```
 
    * Differential expression
