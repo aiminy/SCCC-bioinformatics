@@ -13,7 +13,9 @@
 #201348199-01_raw_count_0.txt p300KO_79_TAC
 #201348200-01_raw_count_0.txt cbpKO_33_sham
 # then run
-#python ~/Code/merge_tables.py Sample_10_raw_count.txt
+
+#python python ~/Code/RNA-seq-data-analysis-pipeline/merge_tables.py Sample_10_raw_count.txt Output_count_samples10.txt
+
 # you will get file name as "merged_counts.txt"
 # this file is used as input for Run_DESeq2.R
 
@@ -46,6 +48,8 @@ try:
 except IndexError:
 	print "No guide file provided"
 	sys.exit()
+
+outf = sys.argv[2]
 	
 #make dict of genes with list of counts
 #list is ordered so treatments will be preserved.
@@ -54,7 +58,7 @@ except IndexError:
 col_header = []
 genes = {}	
 
-outfile = open('merged_counts.txt','w')
+outfile = open(outf,'w')
 
 for line in infile:
 	filename,header = line.strip().split(' ')
@@ -97,4 +101,5 @@ for gene in genes:
 	outfile.write(out_data)
 	
 outfile.close()
-print "Merged table is 'merged_counts.txt'"
+#print "Merged table is 'merged_counts.txt'"
+print 'Merged table is:', outf
