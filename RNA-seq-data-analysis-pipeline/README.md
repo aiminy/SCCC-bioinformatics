@@ -19,6 +19,13 @@ sh Bash_run_submit_job_4_sorted_bam.sh FileBam.txt
 #put all sorted bam names into FileBamSorted.txt 
 sh Bash_run_submit_job_4_sorted_bam_2.sh FileBamSorted.txt
 ```
+
+```python
+#To put all count files into one file
+python ~/Code/merge_tables.py Sample_10_raw_count.txt
+#After you run this, you will get a file named as 
+```
+
    * Differential expression
   
 ```Rscript 
