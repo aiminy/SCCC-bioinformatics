@@ -5,9 +5,9 @@
 3. Feature counting
    * Differential expression
    
-...Rscript
+```Rscript
 Rscript Run_DESeq_3.R inputfile_count inputfile_sample_information outputfile_prefix
-...
+```
  
   
 
