@@ -8,6 +8,15 @@ import csv
 import os
 import subprocess
 import zipfile
+import sys
+
+#try:
+#	outfile = open(sys.argv[1],'w')
+#except IndexError:
+#	print "No outfile provided"
+#	sys.exit()
+
+outf = sys.argv[1]
 
 # List modules used by FastQC:
 modules = ['Basic_Statistics',
@@ -62,7 +71,7 @@ for file in files:
     archive.close()
 
 # Write scores out to a CSV file:
-with open('all_mod_scores.csv', 'w') as f:
+with open(outf, 'w') as f:
     writer = csv.writer(f)
     for mod_scores in all_mod_scores:
         writer.writerow(mod_scores)
