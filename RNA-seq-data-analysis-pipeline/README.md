@@ -4,7 +4,10 @@
 2. Sequence alignment
 
 ```bash
-sh ~/Script_bash/RunAlignment4PairEnd.sh Sample_9.txt 
+#To process for pair end files,run the following:
+sh ~/Script_bash/RunAlignment4PairEnd.sh Sample_9.txt
+#To process for single end files, run the following:
+sh ~/Script_bash/RunAlignment4SingleEnd.sh Sample_9.txt  
 ```
 
 3. Feature counting
