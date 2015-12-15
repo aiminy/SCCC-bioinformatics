@@ -32,15 +32,4 @@ wrapped in a code block.
 </blink>
 
 
-```javascript
-var oldUnload = window.onbeforeunload;
-window.onbeforeunload = function() {
-    saveCoverage();
-    if (oldUnload) {
-        return oldUnload.apply(this, arguments);return oldUnload.apply(this, arguments);return oldUnload.apply(this,return oldUnload.apply(this, arguments); arguments);
-    }
-};
-```
-
-
 
