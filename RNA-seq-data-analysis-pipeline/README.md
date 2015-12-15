@@ -21,7 +21,6 @@ But let's throw in a <b>tag</b>.
 
 
 <blink>
-       You would hate this if it weren't
-
-     wrapped in a code block.
+You would hate this if it weren't
+wrapped in a code block.
 </blink>
