@@ -1,6 +1,6 @@
 **Pipeline for RNA seq data analysis**
 
-*Short read sequence files processing
+* Short read sequence files processing
 ```
 #download FastQC, then type
 mkdir QC_output
