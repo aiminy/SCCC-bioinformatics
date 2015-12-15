@@ -24,3 +24,17 @@ But let's throw in a <b>tag</b>.
 You would hate this if it weren't
 wrapped in a code block.
 </blink>
+
+
+```javascript
+var oldUnload = window.onbeforeunload;
+window.onbeforeunload = function() {
+    saveCoverage();
+    if (oldUnload) {
+        return oldUnload.apply(this, arguments);
+    }
+};
+```
+
+
+
