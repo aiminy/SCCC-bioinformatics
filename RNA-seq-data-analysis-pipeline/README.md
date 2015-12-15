@@ -3,6 +3,9 @@
 1. Sequence short read file processing
 2. Sequence alignment
 3. Feature counting
+   * Get counts for each gene
+
+
    * Differential expression
   
 ```Rscript 
