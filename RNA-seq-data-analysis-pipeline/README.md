@@ -4,8 +4,6 @@
 2. Sequence alignment
 3. Feature counting
    * Differential expression
-   ..**To run 
-```R
 Rscript Run_DESeq_3.R inputfile_count inputfile_sample_information outputfile_prefix
 ```
    * Gene Set Enrichment Analysis(GSEA)
