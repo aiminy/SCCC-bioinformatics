@@ -4,9 +4,11 @@
 2. Sequence alignment
 3. Feature counting
    * Get counts for each gene
-
 ```bash
-sh Bash_run_submit_job_4_sorted_bam_2.sh FileBamSorted.txt
+# put all bam file names into FileBam.txt
+sh Bash_run_submit_job_4_sorted_bam.sh FileBam.txt
+
+#put all sorted bam names into FileBamSorted.txt 
 sh Bash_run_submit_job_4_sorted_bam_2.sh FileBamSorted.txt
 ```
    * Differential expression
