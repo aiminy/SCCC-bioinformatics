@@ -3,7 +3,13 @@
 1. Sequence short read file processing
 2. Sequence alignment
 3. Feature counting
-   * Differential expression 
+   * Differential expression
+...R
+
+...
+ 
+  
+
    * Gene Set Enrichment Analysis(GSEA)
 
 `code`
