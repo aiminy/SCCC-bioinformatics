@@ -7,8 +7,8 @@ mkdir QC_output
 fastqc -o QC_output fq1 fq2 fq3
 
 #move to the directory(QC_output) containg the files ending with _fastqc.zip generated with FastQC
-#then: 
-python ~/Code/RNA-seq-data-analysis-pipeline/QcSum.py
+#then run: 
+python ~/Code/RNA-seq-data-analysis-pipeline/QcSum.py QC_summary_output_file
 ```
 2. Sequence alignment
 ```bash
