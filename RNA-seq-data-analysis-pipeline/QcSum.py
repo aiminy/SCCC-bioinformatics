@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#Usage: move the directory containg the files ending with _fastqc.zip 
+#Usage: move to the directory containg the files ending with _fastqc.zip generated with FastQC
 #then: python QcSum.py 
 #you will get a file named as "all_mod_scores.csv"
 
