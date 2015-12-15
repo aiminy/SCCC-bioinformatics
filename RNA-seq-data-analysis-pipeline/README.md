@@ -1,8 +1,14 @@
 **Pipeline for RNA seq data analysis**
 
 1. Sequence short read file processing
-2. Sequence alignment
 
+```
+#move to the directory containg the files ending with _fastqc.zip generated with FastQC
+#then: 
+python ~/Code/RNA-seq-data-analysis-pipeline/QcSum.py
+```
+
+2. Sequence alignment
 ```bash
 #To process for pair end files,run the following:
 sh ~/Script_bash/RunAlignment4PairEnd.sh Sample_9.txt
