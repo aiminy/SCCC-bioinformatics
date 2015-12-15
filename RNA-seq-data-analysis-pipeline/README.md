@@ -2,6 +2,11 @@
 
 1. Sequence short read file processing
 2. Sequence alignment
+
+```bash
+sh ~/Script_bash/RunAlignment4PairEnd.sh Sample_9.txt 
+```
+
 3. Feature counting
    * Get counts for each gene
 ```bash
