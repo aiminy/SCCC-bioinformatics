@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+#Usage: move the directory containg the files ending with _fastqc.zip 
+#then: python QcSum.py 
+#you will get a file named as "all_mod_scores.csv"
 
 # Import necessary libraries:
 import csv
