@@ -5,6 +5,5 @@
 3. Feature counting
    * Differential expression 
    * Gene Set Enrichment Analysis(GSEA)
-   * 
 
 `code`
