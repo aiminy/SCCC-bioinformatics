@@ -5,7 +5,10 @@
 3. Feature counting
    * Get counts for each gene
 
-
+```bash
+sh Bash_run_submit_job_4_sorted_bam_2.sh FileBamSorted.txt
+sh Bash_run_submit_job_4_sorted_bam_2.sh FileBamSorted.txt
+```
    * Differential expression
   
 ```Rscript 
