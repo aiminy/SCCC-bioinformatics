@@ -1,7 +1,6 @@
 **Pipeline for RNA seq data analysis**
 
-*Short read sequence files processing*
-
+*Short read sequence files processing
 ```
 #download FastQC, then type
 mkdir QC_output
@@ -11,14 +10,14 @@ fastqc -o QC_output fq1 fq2 fq3
 #then run: 
 python ~/Code/RNA-seq-data-analysis-pipeline/QcSum.py QC_summary_output_file
 ```
-*Sequence alignment*
+  * Sequence alignment
 ```bash
 #To process for pair end files,run the following:
 sh ~/Script_bash/RunAlignment4PairEnd.sh Sample_9.txt
 #To process for single end files, run the following:
 sh ~/Script_bash/RunAlignment4SingleEnd.sh Sample_9.txt  
 ```
-*Feature counting*
+   * Feature counting
 ```bash
 # put all bam file names into FileBam.txt
 sh Bash_run_submit_job_4_sorted_bam.sh FileBam.txt
