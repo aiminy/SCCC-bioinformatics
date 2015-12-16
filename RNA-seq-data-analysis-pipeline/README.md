@@ -4,7 +4,7 @@
 ```
 #download FastQC, then type
 mkdir QC_output
-fastqc -o QC_output fq1 fq2 fq3
+fastqc -o QC_output path/*fastq.gz
 
 #move to the directory(QC_output) containg the files ending with _fastqc.zip generated with FastQC
 #then run: 
