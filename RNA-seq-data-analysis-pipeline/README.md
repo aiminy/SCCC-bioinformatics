@@ -35,6 +35,7 @@ python python ~/Code/RNA-seq-data-analysis-pipeline/merge_tables.py Sample_10_ra
    * Differential expression
   
 ```Rscript 
-Rscript Run_DESeq_3.R inputfile_count inputfile_sample_information outputfile_prefix
+Rscript SCCC-bioinformatics/RNA-seq-data-analysis-pipeline/Run_DESeq_3.R inputfile_count inputfile_sample_information outputfile_prefix
+
 ```
    * Gene Set Enrichment Analysis(GSEA)
