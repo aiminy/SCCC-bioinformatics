@@ -1,6 +1,6 @@
 **Pipeline for RNA seq data analysis**
 
-*Download this repository
+* Download this repository
 ```
 git clone https://github.com/aiminy/SCCC-bioinformatics.git
 ```
