@@ -2,7 +2,7 @@
 #This code is adapted from Dave Wheeler
 #To run for our data:
 #make a file called Sample_10_raw_count.txt that include the following 
-#
+#note count file name and sample name are separated by space instead of TAB
 #201348189-01_raw_count_0.txt cbpKO_47_sham
 #201348190-01_raw_count_0.txt cbpKO_36_TAC
 #201348191-01_raw_count_0.txt cbpKO_32_TAC
@@ -16,7 +16,7 @@
 
 #python python ~/Code/RNA-seq-data-analysis-pipeline/merge_tables.py Sample_10_raw_count.txt Output_count_samples10.txt
 
-# you will get file name as "merged_counts.txt"
+# you will get file name as "Output_count_samples10.txt"
 # this file is used as input for Run_DESeq2.R
 
 #####################################################
