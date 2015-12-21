@@ -1,5 +1,10 @@
 **Pipeline for RNA seq data analysis**
 
+*Download this repository
+```
+git clone https://github.com/aiminy/SCCC-bioinformatics.git
+```
+
 * Short read sequence files processing
 ```
 #download FastQC, then type
