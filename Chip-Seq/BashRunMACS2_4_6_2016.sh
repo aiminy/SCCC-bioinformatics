@@ -7,6 +7,8 @@
 #BSUB -o %J.out
 #BSUB -e %J.err
 
+#Usage:sh ~/SCCC-bioinformatics/Chip-Seq/BashRunMACS2_4_6_2016.sh Lluis_Bam_file_name.txt
+
 mkdir /scratch/projects/bbc/Peak_chip_seq
 
 while read line; do
@@ -39,10 +41,10 @@ cat > ~/Script_bash/Run_"$sample_name"_to_chip_seq_peak.sh <<EOF
 #BSUB -o %J.out
 #BSUB -e %J.err
 
-python /nethome/axy148/MACS/bin/macs2 callpeak -t /scratch/projects/bbc/BAM2BW/"$sample_name"_bam_sorted_by_position.bam -f BAM -g mm -n "$sample_name"_bam_mm --outdir /scratch/projects/bbc/Peak_chip_seq -B -q 0.01
+python /nethome/axy148/MACS/bin/macs2 callpeak -t /scratch/projects/bbc/BAM2BW/"$sample_name"_bam_sorted_by_position.bam -f BAM -g mm -n "$sample_name"_bam_mm_shift_75_2 --nomodel --shift=75 --extsize=150 --outdir /scratch/projects/bbc/Peak_chip_seq -B -q 0.01
 
 EOF
 
-bsub -e %J.err -P Bioinformatics4count < ~/Script_bash/Run_"$sample_name"_to_chip_seq_peak.sh
+bsub -P Bioinformatics4count < ~/Script_bash/Run_"$sample_name"_to_chip_seq_peak.sh
 
 done < $1
